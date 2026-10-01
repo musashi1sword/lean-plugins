@@ -1,0 +1,14 @@
+{
+  "name": "lean-plugins",
+  "description": "Musashi2swords' plugins for Claude",
+  "owner": {
+    "name": "Musashi2swords"
+  },
+  "plugins": [
+    {
+      "name": "lean-engineering",
+      "source": "./plugins/lean-engineering",
+      "description": "Advisor-led software workflow: advise, plan, develop, check, debug, ship and github (beta)"
+    }
+  ]
+}
