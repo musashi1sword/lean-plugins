@@ -52,3 +52,11 @@ When asked for status, read open issues by milestone, open PRs, and the last rel
 ## Report
 
 End with a one-line summary of what was recorded, e.g. "GitHub: pushed 3 commits to slice/02-lead-capture, opened PR #14 (closes #12)", and the link.
+
+## Token budget
+
+Keep usage lean so plan limits last:
+- One slice (or one decision) per session. When it's done, suggest `/clear` before starting the next one.
+- Suggest `/compact` after each finished item in a long session.
+- Read only the files the task needs; search before opening whole files, and don't re-read files you just edited.
+- Routine work runs on the session's default model (Sonnet recommended). `plan` and `advise` switch to Opus on their own.

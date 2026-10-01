@@ -67,6 +67,14 @@ Rollback: <one-line trigger and method>
 Next: <deploy on your yes | fix blockers | watch until HH:MM | write the postmortem>
 ```
 
+## Token budget
+
+Keep usage lean so plan limits last:
+- One slice (or one decision) per session. When it's done, suggest `/clear` before starting the next one.
+- Suggest `/compact` after each finished item in a long session.
+- Read only the files the task needs; search before opening whole files, and don't re-read files you just edited.
+- Routine work runs on the session's default model (Sonnet recommended). `plan` and `advise` switch to Opus on their own.
+
 ## GitHub checkpoint (end of every run)
 
 Finish by suggesting the matching GitHub record in one line, as a concrete yes/no offer: tag the release, publish a GitHub Release with the release notes, and close the milestone; for an incident, open an `incident` issue linking the postmortem. Use the `github` skill to do it. Rules:

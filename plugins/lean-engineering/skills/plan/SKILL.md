@@ -1,6 +1,7 @@
 ---
 name: plan
 description: Use before starting a new software project or a large feature, or to get project status. Decides what to build (v1 scope, non-goals, riskiest assumption) and how (stack, data, auth, integrations), scales to milestones for big projects, and writes docs/plan.md for develop to build from.
+model: opus
 ---
 
 # Plan: decide what and how, before any code
@@ -84,6 +85,14 @@ Must-haves: … · Non-goals: …
 ```
 
 Finish with the suggested next step: "run `develop` to build slice 1." Later, when reality contradicts the plan, update the plan first, then the code.
+
+## Token budget
+
+Keep usage lean so plan limits last:
+- One slice (or one decision) per session. When it's done, suggest `/clear` before starting the next one.
+- Suggest `/compact` after each finished item in a long session.
+- Read only the files the task needs; search before opening whole files, and don't re-read files you just edited.
+- Routine work runs on the session's default model (Sonnet recommended). `plan` and `advise` switch to Opus on their own.
 
 ## GitHub checkpoint (end of every run)
 

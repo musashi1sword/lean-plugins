@@ -84,6 +84,14 @@ Lead with what now works. Then:
 
 Only report as done what actually built and passed its checks. If something is half done, say exactly which part.
 
+## Token budget
+
+Keep usage lean so plan limits last:
+- One slice (or one decision) per session. When it's done, suggest `/clear` before starting the next one.
+- Suggest `/compact` after each finished item in a long session.
+- Read only the files the task needs; search before opening whole files, and don't re-read files you just edited.
+- Routine work runs on the session's default model (Sonnet recommended). `plan` and `advise` switch to Opus on their own.
+
 ## GitHub checkpoint (end of every run)
 
 Finish by suggesting the matching GitHub record in one line, as a concrete yes/no offer: commit what landed on the slice branch, push it, and (once the slice is complete) open a pull request that closes the slice issue. Use the `github` skill to do it. Rules:

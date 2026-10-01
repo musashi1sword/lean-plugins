@@ -1,6 +1,6 @@
 {
   "name": "lean-engineering",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A lean, advisor-led software workflow: advise, plan, develop, check, debug, ship and github. Settles decisions before code, builds one slice at a time, proves it works with evidence, and releases with a rollback plan, with the build documented on GitHub.",
   "author": {
     "name": "Musashi2swords"

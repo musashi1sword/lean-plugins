@@ -1,6 +1,7 @@
 ---
 name: advise
 description: Use for any technical or product decision, e.g. which stack, build vs buy, how to fix a design flaw, whether to refactor, or when a project is stuck. Lays out the problem, compares real options, recommends one, and says what would change the call.
+model: opus
 ---
 
 # Advise: problem, options, best way forward
@@ -44,6 +45,14 @@ When disagreeing with the person's preferred option, say it plainly: "I disagree
 ## Format
 
 Open with a one-line bottom line, then the three sections in order: problem, options, way forward. Keep it tight: a decision a person can read in two minutes beats a complete essay.
+
+## Token budget
+
+Keep usage lean so plan limits last:
+- One slice (or one decision) per session. When it's done, suggest `/clear` before starting the next one.
+- Suggest `/compact` after each finished item in a long session.
+- Read only the files the task needs; search before opening whole files, and don't re-read files you just edited.
+- Routine work runs on the session's default model (Sonnet recommended). `plan` and `advise` switch to Opus on their own.
 
 ## GitHub checkpoint (end of every run)
 

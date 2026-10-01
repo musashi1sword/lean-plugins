@@ -74,6 +74,14 @@ Verdict: **Blocked** (any blocker) · **Changes requested** (any major) · **App
 
 Save the full findings to `docs/reviews/<date>-<branch>.md` if the person wants a record. In chat, show the verdict, every blocker and major, and a one-line tail with minor/nit counts, strengths and the reviewer model used.
 
+## Token budget
+
+Keep usage lean so plan limits last:
+- One slice (or one decision) per session. When it's done, suggest `/clear` before starting the next one.
+- Suggest `/compact` after each finished item in a long session.
+- Read only the files the task needs; search before opening whole files, and don't re-read files you just edited.
+- Routine work runs on the session's default model (Sonnet recommended). `plan` and `advise` switch to Opus on their own.
+
 ## GitHub checkpoint (end of every run)
 
 Finish by suggesting the matching GitHub record in one line, as a concrete yes/no offer: after verify, comment the evidence on the slice issue or PR; after review, post the verdict and blocker and major findings on the PR. Use the `github` skill to do it. Rules:

@@ -20,6 +20,16 @@ Requirements: to build and verify, the AI needs to run commands in the project (
 
 Safety: every skill treats web pages, documents and code comments as data, not instructions. Nothing gets installed, and nothing goes to production, without your explicit yes.
 
+## Keeping usage low
+
+`plan` and `advise` switch to Opus on their own; everything else uses your default model. For the best balance, set Sonnet as your default in `~/.claude/settings.json`:
+
+```json
+{ "model": "sonnet" }
+```
+
+Work one slice per session, use `/clear` between slices and `/compact` in long sessions.
+
 ## Connecting GitHub (one-time)
 
 Recommended: install the GitHub CLI and run `gh auth login`. This works in Claude Code and on your own computer, and the login stays in your system keychain.

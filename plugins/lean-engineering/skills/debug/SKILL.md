@@ -45,6 +45,14 @@ Regression test: <name/location>, or why none was possible
 Also found: <same cause elsewhere, or a design flaw>   (omit if none)
 ```
 
+## Token budget
+
+Keep usage lean so plan limits last:
+- One slice (or one decision) per session. When it's done, suggest `/clear` before starting the next one.
+- Suggest `/compact` after each finished item in a long session.
+- Read only the files the task needs; search before opening whole files, and don't re-read files you just edited.
+- Routine work runs on the session's default model (Sonnet recommended). `plan` and `advise` switch to Opus on their own.
+
 ## GitHub checkpoint (end of every run)
 
 Finish by suggesting the matching GitHub record in one line, as a concrete yes/no offer: open or update a `bug` issue with the root cause and evidence, and open the fix PR that closes it. Use the `github` skill to do it. Rules:
